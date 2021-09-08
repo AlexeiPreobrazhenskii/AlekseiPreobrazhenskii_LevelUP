@@ -1,28 +1,43 @@
 package HW2;
 
-public class MiniBus extends BusPark {
+public class ВecommissionedBus {
 
-    String compactbus;
+    String tsMark;
+    String tsType;
+    String tsNumber;
 
-    public MiniBus() {
+    public ВecommissionedBus() {
+
     }
 
-    public MiniBus(String compactbus) {
-        this.compactbus = compactbus;
+    public ВecommissionedBus(String tsMark, String tsType, String tsNumber) {
+        this.tsMark = tsMark;
+        this.tsType = tsType;
+        this.tsNumber = tsNumber;
     }
 
-    public MiniBus(String tsMark, String tsType, Integer tsNumber, Integer tsFuel, Integer tsCost,
-                   String compactbus) {
-        super(tsMark, tsType, tsNumber, tsFuel, tsCost);
-        this.compactbus = compactbus;
+    public String getTsMark() {
+        return tsMark;
     }
 
-    public String getCompactbus() {
-        return compactbus;
+    public void setTsMark(String tsMark) {
+        this.tsMark = tsMark;
     }
 
-    public void setCompactbus(String compactbus) {
-        this.compactbus = compactbus;
+    public String getTsType() {
+        return tsType;
+    }
+
+    public void setTsType(String tsType) {
+        this.tsType = tsType;
+    }
+
+    public String getTsNumber() {
+        return tsNumber;
+    }
+
+    public void setTsNumber(String tsNumber) {
+        this.tsNumber = tsNumber;
     }
 
     @Override
@@ -31,9 +46,7 @@ public class MiniBus extends BusPark {
             + " Марка: " + tsMark
             + ", Тип: " + tsType
             + ", Количество: " + tsNumber
-            + " Расход: " + tsFuel
-            + ", Стоимость за 1 ед.: " + tsCost
-            + ", Компактный автобус: " + compactbus
+
             ;
     }
 }

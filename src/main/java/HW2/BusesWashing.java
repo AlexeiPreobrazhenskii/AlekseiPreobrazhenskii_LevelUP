@@ -1,2 +1,6 @@
-package HW2;public interface BusesWashing {
+package HW2;
+
+public interface BusesWashing {
+
+    void washing();
 }
