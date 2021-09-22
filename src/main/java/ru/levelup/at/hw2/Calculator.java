@@ -1,5 +1,4 @@
-
-package at.calculator.homework2.task1;
+package ru.levelup.at.hw2;
 
 import java.util.Scanner;
 
@@ -39,9 +38,7 @@ public class Calculator {
                 break;
             default:
                 System.out.println("Расчет не произведен");
-
         }
-
     }
 
     private static int digitAfterCheck() {   //Обработка входных данных, только целые
