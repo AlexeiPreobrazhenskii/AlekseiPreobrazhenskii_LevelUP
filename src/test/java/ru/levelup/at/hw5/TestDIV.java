@@ -13,14 +13,14 @@ public class TestDIV extends BeforeAbstract {
         Assert.assertEquals(actual, expected, "Incorrect");
     }
 
-//    @Test //Попытки найти решение не удались
-//    public void divTestLongEqual() throws NumberFormatException {
-//        //1 public void - для тестов ОБЯЗАТЕЛЬНО, + 2 поставить аннотацию для тест нг для понимания что это тест
-//        long actual = calculator.div(400, 0L); //Вызов метода
-//        Assert.assertEquals(actual, "Attempt to divide by zero");
-//
-//
-//    }
+    @Test (expectedExceptions = NumberFormatException.class)
+    public void divTestLongEqual() throws NumberFormatException {
+        long actual = calculator.div(400, 0); //Вызов метода
+        Object expected = NumberFormatException.class ;
+        Assert.assertEquals(actual, expected);
+
+
+    }
 
     @Test(dataProvider = "dataDouble")
     public void divTestDouble(double a, double b) {
