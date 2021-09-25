@@ -3,19 +3,9 @@ package ru.levelup.at.hw3;
 public class MiniBus extends BusPark implements BusUnderWarranty {
 
     String compactbus;
+    Integer price;
 
-    public MiniBus() {
-    }
 
-    public MiniBus(String compactbus) {
-        this.compactbus = compactbus;
-    }
-
-    public MiniBus(String tsMark, String tsType, Integer tsNumber, Integer tsFuel, Integer tsCost,
-                   String compactbus) {
-        super(tsMark, tsType, tsNumber, tsFuel, tsCost);
-        this.compactbus = compactbus;
-    }
 
     public String getCompactbus() {
         return compactbus;
@@ -25,16 +15,35 @@ public class MiniBus extends BusPark implements BusUnderWarranty {
         this.compactbus = compactbus;
     }
 
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public MiniBus() {
+    }
+
+    public MiniBus(String compactbus,Integer price) {
+        this.compactbus = compactbus;
+        this.price = price;
+    }
+
+    public MiniBus(String tsMark, String tsType, Integer tsNumber, Integer tsFuel, Integer tsCost,
+                   String compactbus) {
+        super(tsMark, tsType, tsNumber, tsFuel, tsCost);
+        this.compactbus = compactbus;
+        this.price = price;
+    }
+
     @Override
     public String toString() {
-        return "Микро автобус"
-            + " Марка: " + tsMark
-            + ", Тип: " + tsType
-            + ", Количество: " + tsNumber
-            + " Расход: " + tsFuel
-            + ", Стоимость за 1 ед.: " + tsCost
-            + ", Компактный автобус: " + compactbus
-            ;
+        return "MiniBus{" +
+            "compactbus='" + compactbus + '\'' +
+            ", price=" + price +
+            '}';
     }
 
     @Override

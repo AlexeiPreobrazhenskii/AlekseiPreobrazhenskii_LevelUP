@@ -1,7 +1,7 @@
 package ru.levelup.at.hw3;
 
 //От данного класса происходит наследование
-public abstract class BusPark {
+public class BusPark {
 
     public String tsMark;  // Марка автобусов
     public String tsType;  // Тип автобусов
