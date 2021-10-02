@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator All Tests Suite">
+  <test name="Calculator All Tests">
+<!--    <classes>-->
+<!--&lt;!&ndash;      <class name="ru.levelup.at.hw5.TestDIV"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;      <class name="ru.levelup.at.hw5.TestMULT"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;      <class name="ru.levelup.at.hw5.TestPositivAndNegative"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;      <class name="ru.levelup.at.hw5.TestPowSqrt"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;      <class name="ru.levelup.at.hw5.TestPowTrigonometric"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;      <class name="ru.levelup.at.hw5.TestSUB"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;      <class name="ru.levelup.at.hw5.TestSUM"></class>&ndash;&gt;-->
+
+<!--    </classes>&lt;!&ndash;    <packages>&ndash;&gt;&lt;!&ndash;      <package name="ru.levelup.at.unit.tools"/>&ndash;&gt;&lt;!&ndash;    </packages>&ndash;&gt;-->
+
+
+  <packages>
+    <package name="ru.levelup.at.hw6"></package>
+    
+  </packages>
+
+  </test>
+
+</suite>
+
