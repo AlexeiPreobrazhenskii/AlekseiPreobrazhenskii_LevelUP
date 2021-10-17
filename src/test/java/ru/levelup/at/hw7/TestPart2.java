@@ -1,11 +1,8 @@
 package ru.levelup.at.hw7;
 
-
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import static org.testng.Assert.assertTrue;
 
-public class UserBugRedPage extends BaseSeleniumPageObjectTest {
+public class TestPart2 extends BaseSeleniumPageObjectTest {
 
     @Test
     public void registerUserTest() {
@@ -28,17 +25,18 @@ public class UserBugRedPage extends BaseSeleniumPageObjectTest {
         indexPage.clickMadeNewMail();
         indexPage.enterEnterAddressInNewMail(address);
         indexPage.enterEnterThemeInNewMail(theme);
-        indexPage.enterEnterTextBodyInNewMail(textbody);
-        indexPage.methodClickSaveNewEmail();
-        indexPage.methodClickCloseSaveNewEmail();
-        indexPage.methodEnterToSaveMail();
-        indexPage.methodAssertAndClickOnFindSaveEmail();
-        indexPage.methodSendNewEmailFromSave();
+        indexPage.enterEnterTextBodyInNewMail(textbody); //До данног омомента ничего не меняется
+
+        indexPage.methodSendNewEmail();  //Вместо сейв, будет отправить себе
         indexPage.methodClosePopupWindow();
-
-        indexPage.methodEnterToSaveMail(); //Возвращаемся в черновик
-
         indexPage.methodGoToSentEmail(); //Переход в папку отправленные
+        //Асе рт что письмо в отправленных
+        indexPage.methodClickToTEST_DIR(); //Переход в папку ТЕСТ
+        //Проверка наличия письма в папке ТЕСТ
+        //Проверка письма по адресу
+        //Проверка письма по теме
+        //Проверка письма по боди тексту
+
         indexPage.methodExitFromAccountStep1(); //Выход, жмем и раскрываем меню
         indexPage.methodExitFromAccountStep2(); //Жмем выйти
 

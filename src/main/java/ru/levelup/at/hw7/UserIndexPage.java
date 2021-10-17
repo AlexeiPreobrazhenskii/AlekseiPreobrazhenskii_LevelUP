@@ -89,6 +89,36 @@ public class UserIndexPage {
     @FindBy(xpath ="//div[contains(text(), 'Выйти')]" )
     private WebElement ExitFromAccountStep2;
 
+    // Часть 1 закончилась, начинается часть 2 то, чего не хватило в 1й части
+
+    @FindBy(xpath ="//span[@title='Отправить']" )
+    private WebElement SendNewEmail;
+
+    @FindBy(xpath ="//div[contains(text(),'Тест')]" )
+    private WebElement ClickToTEST_DIR;
+
+    // Добавлено для части 3
+
+    @FindBy(xpath ="//div[contains(text(),'Входящие')]" )
+    private WebElement ClickToEnter_DIR;
+
+    @FindBy(xpath ="//div[contains(text(),'Письма себе')]" )
+    private WebElement EnterMailForSelf;
+
+    @FindBy(xpath ="//span[@title='Aleksei Petrov <aleksei.petrov.900@mail.ru>']" )
+    private WebElement OpenMailForSelf;
+
+    @FindBy(xpath ="//*[@title='Удалить']" )
+    private WebElement DeleteMail;
+
+    @FindBy(xpath ="//a[@href='/trash/']" )
+    private WebElement ClickToDelete_DIR;
+
+    @FindBy(xpath ="//*[@title='Aleksei Petrov <aleksei.petrov.900@mail.ru>']" )
+    private WebElement CheckMailInDelete_DIR;
+
+
+
 
 
 
@@ -158,4 +188,34 @@ public class UserIndexPage {
     public void methodExitFromAccountStep2() {
         wait.until(elementToBeClickable(ExitFromAccountStep2)).click();
     }
+
+    //Начало 2й  части
+    public void methodSendNewEmail() {
+        wait.until(elementToBeClickable(SendNewEmail)).click();
+    }
+
+    public void methodClickToTEST_DIR() {
+        wait.until(elementToBeClickable(ClickToTEST_DIR)).click();
+    }
+    public void methodClickToEnter_DIR() {
+        wait.until(elementToBeClickable(ClickToEnter_DIR)).click();
+    }
+
+    public void methodEnterMailForSelf() {
+        wait.until(elementToBeClickable(EnterMailForSelf)).click();
+    }
+    public void methodOpenMailForSelf() {
+        wait.until(elementToBeClickable(OpenMailForSelf)).click();
+    }
+
+    public void methodDeleteMail() {
+        wait.until(elementToBeClickable(DeleteMail)).click();
+    }
+    public void methodClickToDelete_DIR() {
+        wait.until(elementToBeClickable(ClickToDelete_DIR)).click();
+    }
+    public void methodCheckMailInDelete_DIR() {
+        wait.until(elementToBeClickable(CheckMailInDelete_DIR)).click();
+    }
+
 }
