@@ -4,6 +4,15 @@ package ru.levelup.at.hw7;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -23,6 +32,7 @@ public abstract class BaseSeleniumPageObjectTest {
         driver = new ChromeDriver();
         //wait = new WebDriverWait(driver, 30);  Теперь Wait в PO_Class
         //driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+
     }
 
     @AfterMethod

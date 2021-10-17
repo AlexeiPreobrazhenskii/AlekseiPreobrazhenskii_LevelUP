@@ -33,55 +33,129 @@ public class UserIndexPage {
         driver.navigate().to(URL);
     }
 
-//    public void enterLogin(){
-//        driver.findElement(By.xpath("//input[@placeholder='Имя ящика']")).sendKeys();
-//    }
+    //    public void enterLogin(){
+    //        driver.findElement(By.xpath("//input[@placeholder='Имя ящика']")).sendKeys();
+    //    }
 
     public void clickEnterButton() {
         wait.until(elementToBeClickable(enterButton)).click();
     }
 
-
     @FindBy(xpath = "//input[@placeholder='Имя ящика']")
     private WebElement enterLoginName;
-
     @FindBy(xpath = "//input[@placeholder='Пароль']")
     private WebElement enterPassword;
-
-
     @FindBy(xpath = "//button[contains(text(),'Ввести пароль')]")
     private WebElement clickButtonLogin;
-
-
     @FindBy(xpath = "//button[@type='button'][contains(text(),'Войти')]")
     private WebElement clickEnterButton;
 
 
+    @FindBy(xpath = "div[aria-label='aleksei.petrov.900@mail.ru']")
+    private WebElement getUserAccountName;
+    public String assertUserAccountName(){    //Не понятно как делать в тест НГ
+        return wait.until(visibilityOf(getUserAccountName)).getText() ;
+    }
+    @FindBy(xpath ="//span[@class='compose-button__txt']" )
+    private WebElement MadeNewMail;
+    @FindBy(xpath ="//div[@class='container--ItIg4 size_s--2eBQT size_s--3_M-_']//input[@type='text']" )
+    private WebElement EnterAddressInNewMail;
+    @FindBy(xpath ="//input[@name='Subject']" )
+    private WebElement EnterThemeInNewMail;
+    @FindBy(xpath ="//div[@role='textbox']" )
+    private WebElement EnterTextBodyInNewMail;
+    @FindBy(xpath ="//span[@title='Сохранить']" )
+    private WebElement ClickSaveNewEmail;
+    @FindBy(css ="[title='Закрыть']" )
+    private WebElement ClickCloseSaveNewEmail;
+    @FindBy(xpath ="//div[contains(text(),'Черновики')]" )
+    private WebElement EnterToSaveMail;
+    @FindBy(xpath ="//*[@title='aleksei.petrov.900@mail.ru']" ) //Не понятно как делать в тест НГ
+    private WebElement AssertAndClickOnFindSaveEmail;
+    @FindBy(xpath ="//div[@class='compose-app__footer']//span[@title='Отправить']" )
+    private WebElement SendNewEmailFromSave;
+    @FindBy(xpath ="//span[@title='Закрыть']" )
+    private WebElement ClosePopupWindow;
+
+    @FindBy(xpath ="//span[@class='octopus__title']" )
+    private WebElement AssertSaveMailWillEmpty;
+
+    @FindBy(xpath ="//div[@id='sideBarContent']//div[contains(text(),'Отправленные')]" )
+    private WebElement GoToSentEmail;
+
+    @FindBy(xpath ="//div[@id='headline']//span[contains(text(), 'aleksei.petrov.900@mail.ru')]  " )
+    private WebElement ExitFromAccountStep1;
+
+    @FindBy(xpath ="//div[contains(text(), 'Выйти')]" )
+    private WebElement ExitFromAccountStep2;
 
 
-    //Методы
-    public void sendKeysToNameInputField(final String name){
+
+
+    //************Методы //Методы //Методы //Методы //Методы //Методы//Методы//Методы****************************
+    public void sendKeysToNameInputField(final String name) {
         wait.until(visibilityOf(enterLoginName)).sendKeys(name);
     }
 
-    public void sendKeysToPasswordInputField(final String password){
+    public void sendKeysToPasswordInputField(final String password) {
         wait.until(visibilityOf(enterPassword)).sendKeys(password);
     }
 
-    public void clickLoginButton(){
+    public void clickLoginButton() {
         wait.until(elementToBeClickable(clickButtonLogin)).click();
-
     }
 
-    public void clickEnterButtonAfterPassword(){
+    public void clickEnterButtonAfterPassword() {
         wait.until(elementToBeClickable(clickEnterButton)).click();
-
     }
 
+    public void clickMadeNewMail() {
+        wait.until(elementToBeClickable(MadeNewMail)).click();
+    }
 
+    //Ввод адреса, темы и тела письма
+    public void enterEnterAddressInNewMail(final String address) {
+        wait.until(elementToBeClickable(EnterAddressInNewMail)).sendKeys(address);
+    }
+    public void enterEnterThemeInNewMail(final String theme) {
+        wait.until(elementToBeClickable(EnterThemeInNewMail)).sendKeys(theme);
+    }
+    public void enterEnterTextBodyInNewMail(final String textbody) {
+        wait.until(elementToBeClickable(EnterTextBodyInNewMail)).sendKeys(textbody);
+    }
 
+    public void methodClickSaveNewEmail() {
+        wait.until(elementToBeClickable(ClickSaveNewEmail)).click();
+    }
 
+    public void methodClickCloseSaveNewEmail() {
+        wait.until(elementToBeClickable(ClickCloseSaveNewEmail)).click();
+    }
 
+    public void methodEnterToSaveMail() {
+        wait.until(elementToBeClickable(EnterToSaveMail)).click();
+    }
 
+    public void methodAssertAndClickOnFindSaveEmail() {
+        wait.until(elementToBeClickable(AssertAndClickOnFindSaveEmail)).click();
+    }
 
+    public void methodSendNewEmailFromSave() {
+        wait.until(elementToBeClickable(SendNewEmailFromSave)).click();
+    }
+
+    public void methodClosePopupWindow() {
+        wait.until(elementToBeClickable(ClosePopupWindow)).click();
+    }
+
+    public void methodGoToSentEmail() {
+        wait.until(elementToBeClickable(GoToSentEmail)).click();
+    }
+    public void methodExitFromAccountStep1() {
+        wait.until(elementToBeClickable(ExitFromAccountStep1)).click();
+    }
+
+    public void methodExitFromAccountStep2() {
+        wait.until(elementToBeClickable(ExitFromAccountStep2)).click();
+    }
 }
